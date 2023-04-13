@@ -4,20 +4,20 @@ import './Track.css';
 export class Track extends React.Component {
   render() {
     const renderAction = () => {
-      let isRemoval = true; // isRemoval does what???
+      let isRemoval = false; // isRemoval is connected to what??? step 27
       if (isRemoval) {
-        <button className="Track-action">-</button>
+        return <button className="Track-action">-</button>
       } else {
-        <button className="Track-action">+</button>
+        return <button className="Track-action">+</button>
       }
     }
     return (
       <div className="Track">
           <div className="Track-information">
-            <h3>track name will go here </h3>
-            <p>track artist will go here | track album will go here</p>
+            <h3>{this.props.track.name}</h3>
+            <p>{this.props.track.artist} | {this.props.track.album} </p>
           </div>
-          <button className="Track-action">+ or - will go here{renderAction}</button>
+          <button className="Track-action">{renderAction()}</button>
       </div>
     )
   }
