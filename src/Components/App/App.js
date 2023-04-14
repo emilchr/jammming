@@ -87,7 +87,7 @@ export default class App extends React.Component {
   }
 
   savePlaylist() {
-    const trackURIs = this.state.playlistTracks.uri.map(track => track.uri);
+    const trackURIs = this.state.playlistTracks.map(track => track.uri);
   }
 
   search(term) {
